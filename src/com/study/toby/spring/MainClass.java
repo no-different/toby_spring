@@ -6,18 +6,34 @@ public class MainClass {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        UserDao dao = new UserDao();
+        UserDao dUserDao = new DUserDao();
 
-        User user = new User();
-        user.setId("yjjung");
-        user.setName("정용준");
-        user.setPassword("password");
+        User dUser = new User();
+        dUser.setId("duser");
+        dUser.setName("정용준");
+        dUser.setPassword("password");
 
-        dao.add(user);
+        dUserDao.add(dUser);
 
-        System.out.println("user.getId = " + user.getId());
+        System.out.println("dUser.getId = " + dUser.getId());
 
-        User user1 = dao.get(user.getId());
-        System.out.println("user1 = " + user1.getId());
+        User findDUser = dUserDao.get(dUser.getId());
+        System.out.println("dUser = " + findDUser.getId());
+
+        UserDao nUserDao = new NUserDao();
+
+        User nUser = new User();
+        nUser.setId("nuser");
+        nUser.setName("정용준");
+        nUser.setPassword("password");
+
+        nUserDao.add(nUser);
+
+        System.out.println("nUser.getId = " + nUser.getId());
+
+        User findNUser = nUserDao.get(nUser.getId());
+        System.out.println("nUser = " + findNUser.getId());
+
+
     }
 }

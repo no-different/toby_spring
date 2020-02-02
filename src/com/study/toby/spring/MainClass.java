@@ -9,9 +9,9 @@ public class MainClass {
         UserDao dao = new UserDao();
 
         User user = new User();
-        user.setId("yjjung1");
-        user.setName("정용준1");
-        user.setPassword("password1");
+        user.setId("yjjung");
+        user.setName("정용준");
+        user.setPassword("password");
 
         dao.add(user);
 

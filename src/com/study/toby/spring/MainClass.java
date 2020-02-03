@@ -6,9 +6,7 @@ public class MainClass {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        DConnectionMaker dConnectionMaker = new DConnectionMaker();
-
-        UserDao userDao = new UserDao(dConnectionMaker);
+        UserDao userDao = new DaoFactory().userDao();
 
         User dUser = new User();
         dUser.setId("duser");

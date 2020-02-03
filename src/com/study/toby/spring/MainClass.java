@@ -6,6 +6,8 @@ public class MainClass {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
+        //git test
+
         UserDao userDao = new DaoFactory().userDao();
 
         User dUser = new User();
